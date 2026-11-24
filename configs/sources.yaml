@@ -1,10 +1,25 @@
-﻿sources:
+sources:
   - name: btc_usdt_hourly
     type: api
     url: https://api.binance.com/api/v3/klines
     params:
       symbol: BTCUSDT
       interval: 1h
+    page_size: 1000
+    incremental_param: startTime
+    columns: &kline_columns
+      - open_time
+      - open
+      - high
+      - low
+      - close
+      - volume
+      - close_time
+      - quote_volume
+      - num_trades
+      - taker_buy_base_volume
+      - taker_buy_quote_volume
+      - ignore
     load_type: incremental
     watermark_column: open_time
     target: bronze/crypto/btc_usdt_hourly
@@ -16,6 +31,9 @@
     params:
       symbol: ETHUSDT
       interval: 1h
+    page_size: 1000
+    incremental_param: startTime
+    columns: *kline_columns
     load_type: incremental
     watermark_column: open_time
     target: bronze/crypto/eth_usdt_hourly
