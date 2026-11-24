@@ -1,0 +1,22 @@
+﻿sources:
+  - name: btc_usdt_hourly
+    type: api
+    url: https://api.binance.com/api/v3/klines
+    params:
+      symbol: BTCUSDT
+      interval: 1h
+    load_type: incremental
+    watermark_column: open_time
+    target: bronze/crypto/btc_usdt_hourly
+    enabled: true
+
+  - name: eth_usdt_hourly
+    type: api
+    url: https://api.binance.com/api/v3/klines
+    params:
+      symbol: ETHUSDT
+      interval: 1h
+    load_type: incremental
+    watermark_column: open_time
+    target: bronze/crypto/eth_usdt_hourly
+    enabled: true
