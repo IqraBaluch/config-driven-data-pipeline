@@ -38,3 +38,17 @@ sources:
     watermark_column: open_time
     target: bronze/crypto/eth_usdt_hourly
     enabled: true
+
+  - name: sol_usdt_hourly
+    type: api
+    url: https://api.binance.com/api/v3/klines
+    params: 
+      symbol: SOLUSDT
+      interval: 1h
+    page_size: 1000
+    incremental_param: startTime
+    columns: *kline_columns
+    load_type: incremental
+    watermark_column: open_time
+    target: bronze/crypto/sol_usdt_hourly
+    enabled: true
