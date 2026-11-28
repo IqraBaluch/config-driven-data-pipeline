@@ -1,2 +1,1 @@
-﻿Next: build the API connector (Step 01).
-# NotesLesson 3: learning git commit vs push
+Next: Step 03 - Runner (loop over enabled sources: extract -> write to target).

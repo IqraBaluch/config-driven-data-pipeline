@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Storage-Parquet-e0913a?labelColor=1e2a5a" alt="Parquet">
   <img src="https://img.shields.io/badge/Engine-DuckDB-f2c94c?logo=duckdb&logoColor=black&labelColor=1e2a5a" alt="DuckDB">
   <img src="https://img.shields.io/badge/Architecture-Medallion-a78bfa?labelColor=1e2a5a" alt="Medallion">
-  <img src="https://img.shields.io/badge/Step-01%20of%2010-2ea44f?labelColor=1e2a5a" alt="Progress">
+  <img src="https://img.shields.io/badge/Step-02%20of%2010-2ea44f?labelColor=1e2a5a" alt="Progress">
   <img src="https://img.shields.io/badge/Status-building-5eead4?labelColor=1e2a5a" alt="Status">
 </p>
 
@@ -60,8 +60,8 @@ Every step has its own guide in [`docs/`](docs) and a git tag, so you can see th
 |---|---|---|---|
 | 00 | Project setup, structure, first config | [00-setup](docs/00-setup.md) | ✅ Done |
 | 01 | Config-driven API connector + connector registry | [01-api-connector](docs/01-api-connector.md) | ✅ Done |
-| 02 | Parquet writer: land raw data in bronze | | ⏳ Next |
-| 03 | Runner: run every enabled source from config | | 🔜 Planned |
+| 02 | Parquet writer: append-only, timestamped bronze files | [02-parquet-writer](docs/02-parquet-writer.md) | ✅ Done |
+| 03 | Runner: run every enabled source from config | | ⏳ Next |
 | 04 | State and watermarks: incremental loads | | 🔜 Planned |
 | 05 | Audit logging for every run | | 🔜 Planned |
 | 06 | Schema drift, retries, CSV connector | | 🔜 Planned |
